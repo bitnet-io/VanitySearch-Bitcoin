@@ -1,5 +1,25 @@
 # VanitySearch
 
+# use a prebuilt copy (requires nvidia-docker2 enabled version of docker)
+
+* https://github.com/NVIDIA/nvidia-docker/issues/706#issuecomment-851816502
+
+pull the image around (2.5GB)
+
+```
+docker pull c4pt/vanity-crack
+```
+
+testing
+```
+docker run -it --privileged --runtime=nvidia --rm --gpus all --network none c4pt/vanity-crack -gpu -t 24 -c -stop 1TryMe
+```
+
+```
+docker run -it --privileged --runtime=nvidia --rm --gpus all --network none c4pt/vanity-crack -gpu -t 24 -c -stop 1111111111111111111114oLvT2
+```
+
+
 ```
 ./docker/build-all-supported.sh
 ```
